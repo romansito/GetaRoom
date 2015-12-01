@@ -13,10 +13,10 @@
 
 @implementation Reservation (CoreDataProperties)
 
-@dynamic startDate;
 @dynamic endDate;
 @dynamic guests;
-@dynamic room;
+@dynamic startDate;
 @dynamic guest;
+@dynamic room;
 
 @end

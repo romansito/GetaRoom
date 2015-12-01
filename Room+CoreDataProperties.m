@@ -14,8 +14,8 @@
 @implementation Room (CoreDataProperties)
 
 @dynamic beds;
-@dynamic roomNumber;
 @dynamic rate;
+@dynamic roomNumber;
 @dynamic hotel;
 @dynamic reservation;
 

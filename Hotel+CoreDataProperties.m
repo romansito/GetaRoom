@@ -13,9 +13,9 @@
 
 @implementation Hotel (CoreDataProperties)
 
+@dynamic location;
 @dynamic name;
 @dynamic stars;
-@dynamic location;
-@dynamic room;
+@dynamic rooms;
 
 @end

@@ -10,16 +10,18 @@
 //
 
 #import "Reservation.h"
+#import "Guest.h"
+#import "Room.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Reservation (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSDate *startDate;
 @property (nullable, nonatomic, retain) NSDate *endDate;
 @property (nullable, nonatomic, retain) NSNumber *guests;
-@property (nullable, nonatomic, retain) NSManagedObject *room;
-@property (nullable, nonatomic, retain) NSManagedObject *guest;
+@property (nullable, nonatomic, retain) NSDate *startDate;
+@property (nullable, nonatomic, retain) Guest *guest;
+@property (nullable, nonatomic, retain) Room *room;
 
 @end
 

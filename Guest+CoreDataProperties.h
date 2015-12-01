@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Guest (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSNumber *age;
 @property (nullable, nonatomic, retain) NSString *firstName;
 @property (nullable, nonatomic, retain) NSString *lastName;
-@property (nullable, nonatomic, retain) NSNumber *age;
 @property (nullable, nonatomic, retain) Reservation *reservation;
 
 @end

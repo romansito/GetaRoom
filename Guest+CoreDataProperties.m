@@ -13,9 +13,9 @@
 
 @implementation Guest (CoreDataProperties)
 
+@dynamic age;
 @dynamic firstName;
 @dynamic lastName;
-@dynamic age;
 @dynamic reservation;
 
 @end

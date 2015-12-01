@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Room (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSNumber *beds;
-@property (nullable, nonatomic, retain) NSNumber *roomNumber;
 @property (nullable, nonatomic, retain) NSNumber *rate;
+@property (nullable, nonatomic, retain) NSNumber *roomNumber;
 @property (nullable, nonatomic, retain) Hotel *hotel;
 @property (nullable, nonatomic, retain) Reservation *reservation;
 

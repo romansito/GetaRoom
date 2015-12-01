@@ -10,24 +10,25 @@
 //
 
 #import "Hotel.h"
+#import "Room.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Hotel (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSNumber *location;
 @property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSNumber *stars;
-@property (nullable, nonatomic, retain) NSNumber *location;
-@property (nullable, nonatomic, retain) NSSet<NSManagedObject *> *room;
+@property (nullable, nonatomic, retain) NSSet<Room *> *rooms;
 
 @end
 
 @interface Hotel (CoreDataGeneratedAccessors)
 
-- (void)addRoomObject:(NSManagedObject *)value;
-- (void)removeRoomObject:(NSManagedObject *)value;
-- (void)addRoom:(NSSet<NSManagedObject *> *)values;
-- (void)removeRoom:(NSSet<NSManagedObject *> *)values;
+- (void)addRoomsObject:(Room *)value;
+- (void)removeRoomsObject:(Room *)value;
+- (void)addRooms:(NSSet<Room *> *)values;
+- (void)removeRooms:(NSSet<Room *> *)values;
 
 @end
 
