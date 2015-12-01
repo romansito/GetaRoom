@@ -71,6 +71,7 @@
 			
 			
 		rooms = hotel[@"rooms"];
+			
 		for (NSDictionary *room in rooms)
 			{
 			Room *newRoom = [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:self.managedObjectContext];
@@ -78,6 +79,9 @@
 			newRoom.roomNumber = room[@"number"];
 			newRoom.rate = room[@"rate"];
 			newRoom.beds = room[@"beds"];
+			newRoom.hotel = newHotel;	
+			
+				NSLog(@"%@", newRoom);
 				
 			}
 		}
@@ -85,8 +89,11 @@
 		NSError *saveError;
 		BOOL isSaved = [self.managedObjectContext save:&saveError];
 		
-		if (isSaved) { NSLog(@"Saved Successfully");
-		} else { NSLog(@"%@", saveError.localizedDescription);}
+		if (isSaved) {
+			NSLog(@"Saved Successfully");
+		} else {
+			NSLog(@"%@", saveError.localizedDescription);
+		}
 	}
 }
 
