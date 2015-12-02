@@ -88,6 +88,17 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		3014D73F1C0E9C1500018797 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				3014D72E1C0D488800018797 /* HotelsViewController.h */,
+				3014D72F1C0D488800018797 /* HotelsViewController.m */,
+				3014D7391C0E6B6800018797 /* RoomsViewController.h */,
+				3014D73A1C0E6B6800018797 /* RoomsViewController.m */,
+			);
+			name = Browse;
+			sourceTree = "<group>";
+		};
 		307694931C0CF4AF00F69CAB = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +169,7 @@
 			children = (
 				307694A51C0CF4AF00F69CAB /* ViewController.h */,
 				307694A61C0CF4AF00F69CAB /* ViewController.m */,
-				3014D72E1C0D488800018797 /* HotelsViewController.h */,
-				3014D72F1C0D488800018797 /* HotelsViewController.m */,
-				3014D7391C0E6B6800018797 /* RoomsViewController.h */,
-				3014D73A1C0E6B6800018797 /* RoomsViewController.m */,
+				3014D73F1C0E9C1500018797 /* Browse */,
 				3014D73C1C0E89F200018797 /* DateViewController.h */,
 				3014D73D1C0E89F200018797 /* DateViewController.m */,
 			);

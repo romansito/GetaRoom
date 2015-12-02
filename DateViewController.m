@@ -9,29 +9,51 @@
 #import "DateViewController.h"
 
 @interface DateViewController ()
-
+@property (strong, nonatomic)UIDatePicker *startDatePicker;
+@property (strong, nonatomic)UIDatePicker *endDatePicker;
 @end
 
 @implementation DateViewController
 
+- (void)loadView
+{
+	[self superclass];
+	[self.view setBackgroundColor:[UIColor whiteColor]];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	[self setupDateViewController];
+	[self setupDatePickers];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupDateViewController
+{
+	[self.navigationItem setTitle:@"Book Date"];
+	[self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonSelected:)]];
 }
-*/
+// setup TWO day pickers!
+- (void)setupDatePickers
+{
+	// startDatePicker
+	self.startDatePicker = [[UIDatePicker alloc]init];
+	self.startDatePicker.datePickerMode = UIDatePickerModeDate;
+	self.startDatePicker.frame = CGRectMake(0.0, 84.0, CGRectGetWidth(self.view.frame), 400);
+	[self.view addSubview:self.startDatePicker];
+	// endDatePicker
+	self.endDatePicker = [[UIDatePicker alloc]init];
+	self.endDatePicker.datePickerMode = UIDatePickerModeDate;
+	self.endDatePicker.frame = CGRectMake(0.0, 84.0, CGRectGetWidth(self.view.frame), 0.0);
+}
+
+- (void)doneButtonSelected:(UIBarButtonItem *)sender
+{
+	//
+}
+
+
 
 @end

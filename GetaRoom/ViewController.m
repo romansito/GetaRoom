@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "HotelsViewController.h"
+#import "DateViewController.h"
 
 @interface ViewController ()
 
