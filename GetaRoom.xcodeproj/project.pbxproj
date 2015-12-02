@@ -11,6 +11,11 @@
 		3014D72B1C0D110800018797 /* Reservation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D7251C0D110800018797 /* Reservation+CoreDataProperties.m */; };
 		3014D72C1C0D110800018797 /* Guest+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D7271C0D110800018797 /* Guest+CoreDataProperties.m */; };
 		3014D72D1C0D110800018797 /* Hotel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D7291C0D110800018797 /* Hotel+CoreDataProperties.m */; };
+		3014D7301C0D488800018797 /* HotelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D72F1C0D488800018797 /* HotelsViewController.m */; };
+		3014D7371C0E4CCF00018797 /* hotel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3014D7351C0E4CCE00018797 /* hotel.jpg */; };
+		3014D7381C0E4CCF00018797 /* room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3014D7361C0E4CCE00018797 /* room.jpg */; };
+		3014D73B1C0E6B6800018797 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D73A1C0E6B6800018797 /* RoomsViewController.m */; };
+		3014D73E1C0E89F200018797 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D73D1C0E89F200018797 /* DateViewController.m */; };
 		307694A11C0CF4AF00F69CAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A01C0CF4AF00F69CAB /* main.m */; };
 		307694A41C0CF4AF00F69CAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A31C0CF4AF00F69CAB /* AppDelegate.m */; };
 		307694A71C0CF4AF00F69CAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A61C0CF4AF00F69CAB /* ViewController.m */; };
@@ -33,6 +38,14 @@
 		3014D7271C0D110800018797 /* Guest+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Guest+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3014D7281C0D110800018797 /* Hotel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Hotel+CoreDataProperties.h"; sourceTree = "<group>"; };
 		3014D7291C0D110800018797 /* Hotel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Hotel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3014D72E1C0D488800018797 /* HotelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelsViewController.h; sourceTree = "<group>"; };
+		3014D72F1C0D488800018797 /* HotelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelsViewController.m; sourceTree = "<group>"; };
+		3014D7351C0E4CCE00018797 /* hotel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hotel.jpg; sourceTree = "<group>"; };
+		3014D7361C0E4CCE00018797 /* room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = room.jpg; sourceTree = "<group>"; };
+		3014D7391C0E6B6800018797 /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
+		3014D73A1C0E6B6800018797 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
+		3014D73C1C0E89F200018797 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
+		3014D73D1C0E89F200018797 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		3076949C1C0CF4AF00F69CAB /* GetaRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetaRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307694A01C0CF4AF00F69CAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		307694A21C0CF4AF00F69CAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +118,8 @@
 		3076949F1C0CF4AF00F69CAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3014D7351C0E4CCE00018797 /* hotel.jpg */,
+				3014D7361C0E4CCE00018797 /* room.jpg */,
 				307694D41C0D08E900F69CAB /* hotels.json */,
 				307694AE1C0CF4AF00F69CAB /* Assets.xcassets */,
 				307694B01C0CF4AF00F69CAB /* LaunchScreen.storyboard */,
@@ -143,6 +158,12 @@
 			children = (
 				307694A51C0CF4AF00F69CAB /* ViewController.h */,
 				307694A61C0CF4AF00F69CAB /* ViewController.m */,
+				3014D72E1C0D488800018797 /* HotelsViewController.h */,
+				3014D72F1C0D488800018797 /* HotelsViewController.m */,
+				3014D7391C0E6B6800018797 /* RoomsViewController.h */,
+				3014D73A1C0E6B6800018797 /* RoomsViewController.m */,
+				3014D73C1C0E89F200018797 /* DateViewController.h */,
+				3014D73D1C0E89F200018797 /* DateViewController.m */,
 			);
 			name = Controller;
 			path = ..;
@@ -215,6 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3014D7371C0E4CCF00018797 /* hotel.jpg in Resources */,
+				3014D7381C0E4CCF00018797 /* room.jpg in Resources */,
 				307694D51C0D08E900F69CAB /* hotels.json in Resources */,
 				307694B21C0CF4AF00F69CAB /* LaunchScreen.storyboard in Resources */,
 				307694AF1C0CF4AF00F69CAB /* Assets.xcassets in Resources */,
@@ -229,15 +252,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3014D72D1C0D110800018797 /* Hotel+CoreDataProperties.m in Sources */,
+				3014D7301C0D488800018797 /* HotelsViewController.m in Sources */,
 				3014D72A1C0D110800018797 /* Room+CoreDataProperties.m in Sources */,
 				307694CA1C0D072F00F69CAB /* Reservation.m in Sources */,
 				307694CC1C0D072F00F69CAB /* Guest.m in Sources */,
 				307694A71C0CF4AF00F69CAB /* ViewController.m in Sources */,
 				307694A41C0CF4AF00F69CAB /* AppDelegate.m in Sources */,
+				3014D73E1C0E89F200018797 /* DateViewController.m in Sources */,
 				307694D01C0D072F00F69CAB /* Room.m in Sources */,
 				307694A11C0CF4AF00F69CAB /* main.m in Sources */,
 				307694CE1C0D072F00F69CAB /* Hotel.m in Sources */,
 				3014D72B1C0D110800018797 /* Reservation+CoreDataProperties.m in Sources */,
+				3014D73B1C0E6B6800018797 /* RoomsViewController.m in Sources */,
 				307694AD1C0CF4AF00F69CAB /* GetaRoom.xcdatamodeld in Sources */,
 				3014D72C1C0D110800018797 /* Guest+CoreDataProperties.m in Sources */,
 			);

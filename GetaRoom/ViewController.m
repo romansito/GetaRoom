@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "HotelsViewController.h"
 
 @interface ViewController ()
 
@@ -100,7 +101,8 @@
 
 - (void)browseButtonSelected:(UIButton *)sender
 {
-	//
+	[self.navigationController pushViewController:[[HotelsViewController alloc]init] animated:YES];
+
 }
 - (void)bookButtonSelected:(UIButton *)sender
 {
