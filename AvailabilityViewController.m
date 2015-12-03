@@ -122,10 +122,16 @@
 }
 
 #pragma mark - tableViewDelegate
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//	Room *room = self.dataSource.[indexPath.row];
-//}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	Room *room = self.dataSource[indexPath.row];
+	
+	BookRoomViewController *bookViewController = [[BookRoomViewController alloc]init];
+	bookViewController.room = room;
+	bookViewController.endDate = self.endDate;
+	
+	[self.navigationController pushViewController:bookViewController animated:YES];
+}
 
 @end

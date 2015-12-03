@@ -19,10 +19,13 @@
 - (void)loadView
 {
 	[super loadView];
+	[self.view setBackgroundColor:[UIColor whiteColor]];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	[self setupBookViewController];
+	[self setupMessageLabel];
+	[self setupTextFields];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,50 +64,73 @@
 
 - (void)setupTextFields
 {
-	UITextField *firstName = [[UITextField alloc]init];
-	UITextField *lastName = [[UITextField alloc]init];
-	UITextField *age = [[UITextField alloc]init];
-	firstName.placeholder = @"First Name";
-	lastName.placeholder = @"Last Name";
-	age.placeholder = @"Age";
-	
-	firstName.translatesAutoresizingMaskIntoConstraints = NO;
-	lastName.translatesAutoresizingMaskIntoConstraints = NO;
-	age.translatesAutoresizingMaskIntoConstraints = NO;
-	
-	[self.view addSubview:firstName];
-	[self.view addSubview:lastName];
-	[self.view addSubview:age];
-	
-	NSLayoutConstraint *firstNameLeading = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
-	NSLayoutConstraint *firstNameTop = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:60.0];
-	NSLayoutConstraint *firstNametrailing = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0];
-	
-	NSLayoutConstraint *lastNameLeading = [NSLayoutConstraint constraintWithItem:self.lastName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
-	NSLayoutConstraint *lastNametop = [NSLayoutConstraint constraintWithItem:self.lastName attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:70.0];
-	NSLayoutConstraint *lastNameTrailing = [NSLayoutConstraint constraintWithItem:self.lastName attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0];
-	
-	NSLayoutConstraint *ageLeading = [NSLayoutConstraint constraintWithItem:self.age attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
-	NSLayoutConstraint *ageTop = [NSLayoutConstraint constraintWithItem:self.age attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:80.0];
-	NSLayoutConstraint *ageTrailing = [NSLayoutConstraint constraintWithItem:self.age attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0];
-	
-	firstNameLeading.active = YES;
-	firstNameTop.active = YES;
-	firstNametrailing.active = YES;
-	
-	[self.firstName becomeFirstResponder];
-	
-	lastNameLeading.active = YES;
-	lastNametop.active = YES;
-	lastNameTrailing.active = YES;
-	
-	[self.lastName becomeFirstResponder];
-	
-	ageLeading.active = YES;
-	ageTop.active = YES;
-	ageTrailing.active = YES;
-	
+self.firstName = [[UITextField alloc]init];
+self.firstName.placeholder = @"Please enter your name...";
+self.firstName.translatesAutoresizingMaskIntoConstraints = NO;
+
+[self.view addSubview:self.firstName];
+
+NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
+
+NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:84.0];
+
+NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0];
+
+leading.active = YES;
+top.active = YES;
+trailing.active = YES;
+
+[self.firstName becomeFirstResponder];
 }
+//{
+//	UITextField *firstName = [[UITextField alloc]init];
+//	UITextField *lastName = [[UITextField alloc]init];
+//	UITextField *age = [[UITextField alloc]init];
+//	firstName.placeholder = @"First Name";
+//	lastName.placeholder = @"Last Name";
+//	age.placeholder = @"Age";
+//	
+//	firstName.translatesAutoresizingMaskIntoConstraints = NO;
+//	lastName.translatesAutoresizingMaskIntoConstraints = NO;
+//	age.translatesAutoresizingMaskIntoConstraints = NO;
+//	
+//	[self.view addSubview:firstName];
+//	[self.view addSubview:lastName];
+//	[self.view addSubview:age];
+//	
+////	NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.nameField attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
+//	NSLayoutConstraint *firstNameLeading = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.0 constant:0.0];
+//
+////	NSLayoutConstraint *firstNameLeading = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
+//	NSLayoutConstraint *firstNameTop = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+//	NSLayoutConstraint *firstNametrailing = [NSLayoutConstraint constraintWithItem:self.firstName attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-0.0];
+//	
+//	NSLayoutConstraint *lastNameLeading = [NSLayoutConstraint constraintWithItem:self.lastName attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+//	NSLayoutConstraint *lastNametop = [NSLayoutConstraint constraintWithItem:self.lastName attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+//	NSLayoutConstraint *lastNameTrailing = [NSLayoutConstraint constraintWithItem:self.lastName attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+//	
+//	NSLayoutConstraint *ageLeading = [NSLayoutConstraint constraintWithItem:self.age attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+//	NSLayoutConstraint *ageTop = [NSLayoutConstraint constraintWithItem:self.age attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+//	NSLayoutConstraint *ageTrailing = [NSLayoutConstraint constraintWithItem:self.age attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+//	
+//	firstNameLeading.active = YES;
+//	firstNameTop.active = YES;
+//	firstNametrailing.active = YES;
+//	
+////	[self.firstName becomeFirstResponder];
+//	
+//	lastNameLeading.active = YES;
+//	lastNametop.active = YES;
+//	lastNameTrailing.active = YES;
+//	
+//	
+//	ageLeading.active = YES;
+//	ageTop.active = YES;
+//	ageTrailing.active = YES;
+//
+//	[self.firstName becomeFirstResponder];
+
+
 
 - (void)saveButtonSelected:(UIBarButtonItem *)sender
 {
