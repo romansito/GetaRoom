@@ -107,7 +107,7 @@
 }
 - (void)bookButtonSelected:(UIButton *)sender
 {
-//	BookViewController *bookVC = [[BookViewController alloc] init];
+	
 	[self.navigationController pushViewController:[DateViewController new] animated:YES];
 
 }

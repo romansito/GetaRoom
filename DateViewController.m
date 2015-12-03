@@ -7,6 +7,7 @@
 //
 
 #import "DateViewController.h"
+#import "AvailabilityViewController.h"
 
 @interface DateViewController()
 @property (strong, nonatomic)UIDatePicker *startDatePicker;
@@ -21,10 +22,11 @@
 {
 	[super loadView];
 	[self.view setBackgroundColor:[UIColor whiteColor]];
+	[self setupDateViewController];
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self setupDateViewController];
 	[self setupLabels];
 	[self setupDatePickers];
 }
@@ -44,16 +46,16 @@
 {
 	self.startDateLabel = [[UILabel alloc]init];
 	self.startDateLabel.text = @"Check In";
-	self.startDateLabel.textColor = [UIColor whiteColor];
-	self.startDateLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:11.0];
-	NSLayoutConstraint *startDateLabelTop = [NSLayoutConstraint constraintWithItem:self.startDateLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:50.0];
+	self.startDateLabel.textColor = [UIColor colorWithRed:136.0 / 255.0 green:160.0 / 255.0 blue:168.0 / 255.0 alpha:1.0];
+	self.startDateLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0];
+	NSLayoutConstraint *startDateLabelTop = [NSLayoutConstraint constraintWithItem:self.startDateLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:90.0];
 	NSLayoutConstraint *startDateLabelX = [NSLayoutConstraint constraintWithItem:self.startDateLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
 	
 	self.endDateLabel = [[UILabel alloc]init];
-	self.endDateLabel.text = @"Check In";
-	self.endDateLabel.textColor = [UIColor whiteColor];
-	self.endDateLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:11.0];
-	NSLayoutConstraint *endDateLabelTop = [NSLayoutConstraint constraintWithItem:self.endDateLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:380.0];
+	self.endDateLabel.text = @"Check Out";
+	self.endDateLabel.textColor = [UIColor colorWithRed:136.0 / 255.0 green:160.0 / 255.0 blue:168.0 / 255.0 alpha:1.0];
+	self.endDateLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0];
+	NSLayoutConstraint *endDateLabelTop = [NSLayoutConstraint constraintWithItem:self.endDateLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:340.0];
 	NSLayoutConstraint *endDateLabelX = [NSLayoutConstraint constraintWithItem:self.endDateLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
 	
 	[self.view addSubview:self.startDateLabel];
@@ -75,34 +77,38 @@
 	// startDatePicker
 	self.startDatePicker = [[UIDatePicker alloc]init];
 	self.startDatePicker.datePickerMode = UIDatePickerModeDate;
-	self.startDatePicker.frame = CGRectMake(0.0, 60.0, CGRectGetWidth(self.view.frame), 150.0);
+	self.startDatePicker.frame = CGRectMake(0.0, 140.0, CGRectGetWidth(self.view.frame), 100.0);
 	[self.view addSubview:self.startDatePicker];
 	// endDatePicker
 	self.endDatePicker = [[UIDatePicker alloc]init];
 	self.endDatePicker.datePickerMode = UIDatePickerModeDate;
-	self.endDatePicker.frame = CGRectMake(0.0, 400.0, CGRectGetWidth(self.view.frame), 150.0);
+	self.endDatePicker.frame = CGRectMake(0.0, 380.0, CGRectGetWidth(self.view.frame), 100.0);
 	[self.view addSubview:self.endDatePicker];
 }
 
 - (void)doneButtonSelected:(UIBarButtonItem *)sender
 {
-	NSDate *startDate = [self.startDatePicker date];
-	NSDate *endDate = [self.endDatePicker date];
+	NSDate *startDate = self.startDatePicker.date;
+	NSDate *endDate = self.endDatePicker.date;
 	
-	if (startDate > endDate) {
+	if (startDate >= endDate) {
 		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops..." message:@"Please choose a valid date" preferredStyle:UIAlertControllerStyleAlert];
-		UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertViewStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+		UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 			self.endDatePicker.date = [NSDate date];
 		}];
 		
 		[alertController addAction:okAction];
 		[self presentViewController:alertController animated:YES completion:nil];
 		
-		return;
+//		return;
+		
+	} else {
+		AvailabilityViewController *availabilityVC = [[AvailabilityViewController alloc] init];
+		availabilityVC.startDate = startDate;
+		availabilityVC.endDate = endDate;
+		[self.navigationController pushViewController:availabilityVC animated:YES];
+		
 	}
-	
 }
-
-
 
 @end

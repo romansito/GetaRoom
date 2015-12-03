@@ -9,6 +9,6 @@
 #import "ViewController.h"
 #import <UIKit/UIKit.h>
 
-@interface DateViewController : ViewController
+@interface DateViewController : UIViewController
 
 @end

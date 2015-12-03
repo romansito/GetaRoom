@@ -16,6 +16,9 @@
 		3014D7381C0E4CCF00018797 /* room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3014D7361C0E4CCE00018797 /* room.jpg */; };
 		3014D73B1C0E6B6800018797 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D73A1C0E6B6800018797 /* RoomsViewController.m */; };
 		3014D73E1C0E89F200018797 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D73D1C0E89F200018797 /* DateViewController.m */; };
+		3014D7431C0F557200018797 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D7421C0F557200018797 /* AvailabilityViewController.m */; };
+		3014D7491C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D7481C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.m */; };
+		3014D74D1C0FC13800018797 /* BookRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D74C1C0FC13800018797 /* BookRoomViewController.m */; };
 		307694A11C0CF4AF00F69CAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A01C0CF4AF00F69CAB /* main.m */; };
 		307694A41C0CF4AF00F69CAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A31C0CF4AF00F69CAB /* AppDelegate.m */; };
 		307694A71C0CF4AF00F69CAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A61C0CF4AF00F69CAB /* ViewController.m */; };
@@ -46,6 +49,12 @@
 		3014D73A1C0E6B6800018797 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
 		3014D73C1C0E89F200018797 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		3014D73D1C0E89F200018797 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
+		3014D7411C0F557200018797 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
+		3014D7421C0F557200018797 /* AvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
+		3014D7471C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSmanagedObjectContext_Category.h"; sourceTree = "<group>"; };
+		3014D7481C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSmanagedObjectContext_Category.m"; sourceTree = "<group>"; };
+		3014D74B1C0FC13800018797 /* BookRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRoomViewController.h; sourceTree = "<group>"; };
+		3014D74C1C0FC13800018797 /* BookRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRoomViewController.m; sourceTree = "<group>"; };
 		3076949C1C0CF4AF00F69CAB /* GetaRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetaRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307694A01C0CF4AF00F69CAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		307694A21C0CF4AF00F69CAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +106,29 @@
 				3014D73A1C0E6B6800018797 /* RoomsViewController.m */,
 			);
 			name = Browse;
+			sourceTree = "<group>";
+		};
+		3014D7401C0F4ED800018797 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				3014D73C1C0E89F200018797 /* DateViewController.h */,
+				3014D73D1C0E89F200018797 /* DateViewController.m */,
+				3014D7411C0F557200018797 /* AvailabilityViewController.h */,
+				3014D7421C0F557200018797 /* AvailabilityViewController.m */,
+				3014D74B1C0FC13800018797 /* BookRoomViewController.h */,
+				3014D74C1C0FC13800018797 /* BookRoomViewController.m */,
+			);
+			name = Book;
+			sourceTree = "<group>";
+		};
+		3014D74A1C0FAE1A00018797 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3014D7471C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.h */,
+				3014D7481C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.m */,
+			);
+			name = Categories;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		307694931C0CF4AF00F69CAB = {
@@ -170,8 +202,7 @@
 				307694A51C0CF4AF00F69CAB /* ViewController.h */,
 				307694A61C0CF4AF00F69CAB /* ViewController.m */,
 				3014D73F1C0E9C1500018797 /* Browse */,
-				3014D73C1C0E89F200018797 /* DateViewController.h */,
-				3014D73D1C0E89F200018797 /* DateViewController.m */,
+				3014D7401C0F4ED800018797 /* Book */,
 			);
 			name = Controller;
 			path = ..;
@@ -180,6 +211,7 @@
 		307694D31C0D087900F69CAB /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3014D74A1C0FAE1A00018797 /* Categories */,
 				307694A21C0CF4AF00F69CAB /* AppDelegate.h */,
 				307694A31C0CF4AF00F69CAB /* AppDelegate.m */,
 			);
@@ -260,12 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3014D72D1C0D110800018797 /* Hotel+CoreDataProperties.m in Sources */,
+				3014D7431C0F557200018797 /* AvailabilityViewController.m in Sources */,
 				3014D7301C0D488800018797 /* HotelsViewController.m in Sources */,
 				3014D72A1C0D110800018797 /* Room+CoreDataProperties.m in Sources */,
 				307694CA1C0D072F00F69CAB /* Reservation.m in Sources */,
 				307694CC1C0D072F00F69CAB /* Guest.m in Sources */,
 				307694A71C0CF4AF00F69CAB /* ViewController.m in Sources */,
 				307694A41C0CF4AF00F69CAB /* AppDelegate.m in Sources */,
+				3014D74D1C0FC13800018797 /* BookRoomViewController.m in Sources */,
+				3014D7491C0FAE0C00018797 /* NSObject+NSmanagedObjectContext_Category.m in Sources */,
 				3014D73E1C0E89F200018797 /* DateViewController.m in Sources */,
 				307694D01C0D072F00F69CAB /* Room.m in Sources */,
 				307694A11C0CF4AF00F69CAB /* main.m in Sources */,
