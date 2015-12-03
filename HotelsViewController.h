@@ -6,8 +6,8 @@
 //  Copyright © 2015 Roman Salazar Lopez. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface HotelsViewController : ViewController
+@interface HotelsViewController : UIViewController
 
 @end

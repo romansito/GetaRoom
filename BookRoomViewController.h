@@ -6,8 +6,14 @@
 //  Copyright © 2015 Roman Salazar Lopez. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
+#import "Room.h"
+#import "Hotel.h"
+#import "Reservation.h"
+#import "Guest.h"
 
-@interface BookRoomViewController : ViewController
-
+@interface BookRoomViewController : UIViewController
+@property (strong,nonatomic)Room *room;
+@property (strong,nonatomic)NSDate *startDate;
+@property (strong,nonatomic)NSDate *endDate;
 @end

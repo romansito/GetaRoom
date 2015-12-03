@@ -6,9 +6,9 @@
 //  Copyright © 2015 Roman Salazar Lopez. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface AvailabilityViewController : ViewController
+@interface AvailabilityViewController : UIViewController
 @property (strong, nonatomic)NSDate *startDate;
 @property (strong, nonatomic)NSDate *endDate;
 @end

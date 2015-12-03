@@ -94,7 +94,8 @@
 	if (startDate >= endDate) {
 		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops..." message:@"Please choose a valid date" preferredStyle:UIAlertControllerStyleAlert];
 		UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-			self.endDatePicker.date = [NSDate date];
+			[self.endDatePicker setDate:[NSDate date] animated:YES];
+
 		}];
 		
 		[alertController addAction:okAction];
