@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "HotelsViewController.h"
 #import "DateViewController.h"
+#import "SearchReservationsViewController.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,21 @@
 	[super viewDidLoad];
 	[self setUpViewController];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+ 
+	AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+	
+	NSManagedObjectContext *context = delegate.managedObjectContext;
+	
+	NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
+	
+	NSArray *guests = [context executeFetchRequest:request error:nil];
+	
+	NSLog(@"%li", (unsigned long)guests.count);
+}
+
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
@@ -45,7 +61,7 @@
 	
 	[browseButton setTitle:@"Browse" forState:UIControlStateNormal];
 	[bookButton setTitle:@"Book" forState:UIControlStateNormal];
-	[lookupButton setTitle:@"Lookup" forState:UIControlStateNormal];
+	[lookupButton setTitle:@"Search Reservation" forState:UIControlStateNormal];
 	
 	[browseButton setBackgroundColor:[UIColor colorWithRed:100.0 / 255.0 green:210.0 / 255.0 blue:100.0 / 255.0 alpha:1.0]];
 	[lookupButton setBackgroundColor:[UIColor colorWithRed:136.0 / 255.0 green:160.0 / 255.0 blue:168.0 / 255.0 alpha:1.0]];
@@ -113,7 +129,7 @@
 }
 - (void)lookupButtonSelected:(UIButton *)sender
 {
-	//
+	[self.navigationController pushViewController:[SearchReservationsViewController new] animated:YES];
 }
 
 
