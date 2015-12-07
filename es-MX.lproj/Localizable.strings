@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  GetaRoom
+
+  Created by Roman Salazar Lopez on 12/5/15.
+  Copyright © 2015 Roman Salazar Lopez. All rights reserved.
+*/
+
+
+"GetaRoom" = "GetaRoom";
+"Browse" = "Descubre";
+"Book" = "Reserva";
+"Search Reservation" = "Tus Reservaciones";
+"Rooms" = "Cuartos";
+"Room: %i (%i beds, $%0.2f per night)" = "Cuarto: %i (%i camas, $%0.2f por Noche)";
+"Book Date" = "Reserva el Dia";
+"Check In" = "Comienza";
+"Check Out" = "Termina";
+"Oops..." = "Oh...";
+"Please choose a valid date" = "Porfavor escoje un dia valido";
+"Reservation at %@, Room: %i, From: %@ - To: %@" = "Reservacion en %@, Habitacion: %i, Desde: %@ - Hasta: %@";
+"First Name" = "Nombre";
+"Last Name" = "Apellido";
+"Search Reservations" = "Busca Reservaciones";
+
