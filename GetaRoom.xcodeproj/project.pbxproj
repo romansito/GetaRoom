@@ -33,6 +33,7 @@
 		307694CE1C0D072F00F69CAB /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694C41C0D072F00F69CAB /* Hotel.m */; };
 		307694D01C0D072F00F69CAB /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694C81C0D072F00F69CAB /* Room.m */; };
 		307694D51C0D08E900F69CAB /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 307694D41C0D08E900F69CAB /* hotels.json */; };
+		307C82BC1C16290900C9B6A6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 307C82BE1C16290900C9B6A6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +74,7 @@
 		3014D7551C1101A000018797 /* GetaRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetaRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3014D7571C1101A000018797 /* GetaRoomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetaRoomTests.m; sourceTree = "<group>"; };
 		3014D7591C1101A000018797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3014D75F1C1101B700018797 /* SearchReservationsViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchReservationsViewControllerTest.m; sourceTree = "<group>"; };
+		3014D75F1C1101B700018797 /* SearchReservationsViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchReservationsViewControllerTest.m; path = ../SearchReservationsViewControllerTest.m; sourceTree = "<group>"; };
 		3076949C1C0CF4AF00F69CAB /* GetaRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetaRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307694A01C0CF4AF00F69CAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		307694A21C0CF4AF00F69CAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		307694A61C0CF4AF00F69CAB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = GetaRoom/ViewController.m; sourceTree = "<group>"; };
 		307694AC1C0CF4AF00F69CAB /* GetaRoom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GetaRoom.xcdatamodel; sourceTree = "<group>"; };
 		307694AE1C0CF4AF00F69CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		307694B11C0CF4AF00F69CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		307694B31C0CF4AF00F69CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307694BB1C0D072F00F69CAB /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
 		307694BC1C0D072F00F69CAB /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
@@ -93,6 +93,10 @@
 		307694C71C0D072F00F69CAB /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		307694C81C0D072F00F69CAB /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		307694D41C0D08E900F69CAB /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
+		307C82C01C1631E900C9B6A6 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		307C82C41C16324900C9B6A6 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "es-MX"; path = "es-MX.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		307C82C61C16326E00C9B6A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		307C82C81C1632BC00C9B6A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		3014D7561C1101A000018797 /* GetaRoomTests */ = {
 			isa = PBXGroup;
 			children = (
+				3014D75F1C1101B700018797 /* SearchReservationsViewControllerTest.m */,
 				3014D7571C1101A000018797 /* GetaRoomTests.m */,
 				3014D7591C1101A000018797 /* Info.plist */,
 			);
@@ -178,7 +183,7 @@
 		307694931C0CF4AF00F69CAB = {
 			isa = PBXGroup;
 			children = (
-				3014D75F1C1101B700018797 /* SearchReservationsViewControllerTest.m */,
+				307C82BE1C16290900C9B6A6 /* Localizable.strings */,
 				3076949E1C0CF4AF00F69CAB /* GetaRoom */,
 				3076949F1C0CF4AF00F69CAB /* Supporting Files */,
 				3014D7561C1101A000018797 /* GetaRoomTests */,
@@ -332,6 +337,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-MX",
 			);
 			mainGroup = 307694931C0CF4AF00F69CAB;
 			productRefGroup = 3076949D1C0CF4AF00F69CAB /* Products */;
@@ -357,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3014D7371C0E4CCF00018797 /* hotel.jpg in Resources */,
+				307C82BC1C16290900C9B6A6 /* Localizable.strings in Resources */,
 				3014D7381C0E4CCF00018797 /* room.jpg in Resources */,
 				307694D51C0D08E900F69CAB /* hotels.json in Resources */,
 				307694B21C0CF4AF00F69CAB /* LaunchScreen.storyboard in Resources */,
@@ -432,9 +439,19 @@
 		307694B01C0CF4AF00F69CAB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				307694B11C0CF4AF00F69CAB /* Base */,
+				307C82C41C16324900C9B6A6 /* es-MX */,
+				307C82C61C16326E00C9B6A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		307C82BE1C16290900C9B6A6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				307C82C01C1631E900C9B6A6 /* es-MX */,
+				307C82C81C1632BC00C9B6A6 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -578,6 +595,7 @@
 				3014D75E1C1101A000018797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		307694971C0CF4AF00F69CAB /* Build configuration list for PBXProject "GetaRoom" */ = {
 			isa = XCConfigurationList;

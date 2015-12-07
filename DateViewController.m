@@ -37,7 +37,7 @@
 
 - (void)setupDateViewController
 {
-	[self.navigationItem setTitle:@"Book Date"];
+	[self.navigationController setTitle:NSLocalizedString(@"Book Date", nil)];
 	[self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonSelected:)]];
 }
 
@@ -45,14 +45,14 @@
 - (void)setupLabels
 {
 	self.startDateLabel = [[UILabel alloc]init];
-	self.startDateLabel.text = @"Check In";
+	self.startDateLabel.text = NSLocalizedString(@"Check In", nil);
 	self.startDateLabel.textColor = [UIColor colorWithRed:136.0 / 255.0 green:160.0 / 255.0 blue:168.0 / 255.0 alpha:1.0];
 	self.startDateLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0];
 	NSLayoutConstraint *startDateLabelTop = [NSLayoutConstraint constraintWithItem:self.startDateLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:90.0];
 	NSLayoutConstraint *startDateLabelX = [NSLayoutConstraint constraintWithItem:self.startDateLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
 	
 	self.endDateLabel = [[UILabel alloc]init];
-	self.endDateLabel.text = @"Check Out";
+	self.endDateLabel.text = NSLocalizedString(@"Check Out", nil);
 	self.endDateLabel.textColor = [UIColor colorWithRed:136.0 / 255.0 green:160.0 / 255.0 blue:168.0 / 255.0 alpha:1.0];
 	self.endDateLabel.font = [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:18.0];
 	NSLayoutConstraint *endDateLabelTop = [NSLayoutConstraint constraintWithItem:self.endDateLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:340.0];
@@ -92,7 +92,7 @@
 	NSDate *endDate = self.endDatePicker.date;
 	
 	if (startDate >= endDate) {
-		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops..." message:@"Please choose a valid date" preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Oops...", nil) message:NSLocalizedString(@"Please choose a valid date", nil) preferredStyle:UIAlertControllerStyleAlert];
 		UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 			[self.endDatePicker setDate:[NSDate date] animated:YES];
 

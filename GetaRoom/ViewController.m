@@ -48,7 +48,7 @@
 }
 
 - (void)setUpViewController {
-	self.navigationItem.title = @"GetaRoom";
+	self.navigationItem.title = NSLocalizedString(@"GetaRoom", nil);
 }
 
 - (void)setUpCustomLayout
@@ -59,9 +59,9 @@
 	UIButton *bookButton = [[UIButton alloc]init];
 	UIButton *lookupButton = [[UIButton alloc]init];
 	
-	[browseButton setTitle:@"Browse" forState:UIControlStateNormal];
-	[bookButton setTitle:@"Book" forState:UIControlStateNormal];
-	[lookupButton setTitle:@"Search Reservation" forState:UIControlStateNormal];
+	[browseButton setTitle:NSLocalizedString(@"Browse", nil) forState:UIControlStateNormal];
+	[bookButton setTitle:NSLocalizedString(@"Book", nil) forState:UIControlStateNormal];
+	[lookupButton setTitle:NSLocalizedString(@"Search Reservation", nil) forState:UIControlStateNormal];
 	
 	[browseButton setBackgroundColor:[UIColor colorWithRed:100.0 / 255.0 green:210.0 / 255.0 blue:100.0 / 255.0 alpha:1.0]];
 	[lookupButton setBackgroundColor:[UIColor colorWithRed:136.0 / 255.0 green:160.0 / 255.0 blue:168.0 / 255.0 alpha:1.0]];

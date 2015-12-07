@@ -48,7 +48,7 @@
 	messageLabel.numberOfLines = 0;
 	messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
 	
-	messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: %@ - To: %@", self.room.hotel.name, self.room.roomNumber.intValue, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle], [NSDateFormatter localizedStringFromDate:self.endDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+	messageLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Reservation at %@, Room: %i, From: %@ - To: %@", nil), self.room.hotel.name, self.room.roomNumber.intValue, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle], [NSDateFormatter localizedStringFromDate:self.endDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
 	
 	NSLog(@"%@ %@", self.startDate, self.endDate);
 	
@@ -91,7 +91,7 @@
 - (void)firstNameTextField
 {
 	self.firstName = [[UITextField alloc]init];
-	self.firstName.placeholder = @"First Name";
+	self.firstName.placeholder = NSLocalizedString(@"First Name", nil);
 	self.firstName.translatesAutoresizingMaskIntoConstraints = NO;
 
 	[self.view addSubview:self.firstName];
@@ -112,7 +112,7 @@
 - (void)lastNameTextField
 {
 	self.lastName = [[UITextField alloc]init];
-	self.lastName.placeholder = @"Last Name";
+	self.lastName.placeholder = NSLocalizedString(@"Last Name", nil);
 	self.lastName.translatesAutoresizingMaskIntoConstraints = NO;
 	
 	[self.view addSubview:self.lastName];

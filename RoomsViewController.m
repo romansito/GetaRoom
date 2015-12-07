@@ -30,7 +30,7 @@
 
 - (void)setupRoomsViewController
 {
-	[self setTitle:@"Rooms"];
+	[self setTitle:NSLocalizedString(@"Rooms", nil)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,7 +73,7 @@
 	}
 	
 	Room *room = (Room *)[self.hotel.rooms allObjects][indexPath.row];
-	cell.textLabel.text = [NSString stringWithFormat:@"Room: %i (%i beds, $%0.2f per night)", room.roomNumber.intValue, room.beds.intValue, room.rate.floatValue];
+	cell.textLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Room: %i (%i beds, $%0.2f per night)", nil), room.roomNumber.intValue, room.beds.intValue, room.rate.floatValue];
 	
 	return cell;
 }
