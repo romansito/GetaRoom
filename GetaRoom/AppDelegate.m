@@ -12,6 +12,10 @@
 #import "Room.h"
 #import "Reservation.h"
 #import "Guest.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
+
 
 @interface AppDelegate ()
 
@@ -27,6 +31,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[self setUpRootViewController];
 	[self bootStrapApp];
+	[Fabric with:@[[Answers class],
+	[Crashlytics class]]];
 	return YES;
 }
 
