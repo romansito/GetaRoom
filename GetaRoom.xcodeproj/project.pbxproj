@@ -22,6 +22,8 @@
 		3014D7501C1100F400018797 /* SearchReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D74F1C1100F400018797 /* SearchReservationsViewController.m */; };
 		3014D7581C1101A000018797 /* GetaRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D7571C1101A000018797 /* GetaRoomTests.m */; };
 		3014D7601C1101B700018797 /* SearchReservationsViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3014D75F1C1101B700018797 /* SearchReservationsViewControllerTest.m */; };
+		302482181C278F6B00B6FA6B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302482161C278F6B00B6FA6B /* Fabric.framework */; };
+		3024821B1C27904B00B6FA6B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3024821A1C27904B00B6FA6B /* Crashlytics.framework */; };
 		307694A11C0CF4AF00F69CAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A01C0CF4AF00F69CAB /* main.m */; };
 		307694A41C0CF4AF00F69CAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A31C0CF4AF00F69CAB /* AppDelegate.m */; };
 		307694A71C0CF4AF00F69CAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 307694A61C0CF4AF00F69CAB /* ViewController.m */; };
@@ -75,6 +77,8 @@
 		3014D7571C1101A000018797 /* GetaRoomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetaRoomTests.m; sourceTree = "<group>"; };
 		3014D7591C1101A000018797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3014D75F1C1101B700018797 /* SearchReservationsViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchReservationsViewControllerTest.m; path = ../SearchReservationsViewControllerTest.m; sourceTree = "<group>"; };
+		302482161C278F6B00B6FA6B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		3024821A1C27904B00B6FA6B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		3076949C1C0CF4AF00F69CAB /* GetaRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetaRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		307694A01C0CF4AF00F69CAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		307694A21C0CF4AF00F69CAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3024821B1C27904B00B6FA6B /* Crashlytics.framework in Frameworks */,
+				302482181C278F6B00B6FA6B /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +189,8 @@
 		307694931C0CF4AF00F69CAB = {
 			isa = PBXGroup;
 			children = (
+				3024821A1C27904B00B6FA6B /* Crashlytics.framework */,
+				302482161C278F6B00B6FA6B /* Fabric.framework */,
 				307C82BE1C16290900C9B6A6 /* Localizable.strings */,
 				3076949E1C0CF4AF00F69CAB /* GetaRoom */,
 				3076949F1C0CF4AF00F69CAB /* Supporting Files */,
@@ -300,6 +308,7 @@
 				307694991C0CF4AF00F69CAB /* Frameworks */,
 				3076949A1C0CF4AF00F69CAB /* Resources */,
 				3014D7611C110A6C00018797 /* ShellScript */,
+				302482151C278EE300B6FA6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,6 +384,19 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		3014D7611C110A6C00018797 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run c0ea233c86e171e6ed99d01a648eb00a9ca45a44 74fc8953a186ed00d2710e682716bdb32319830e50990a480e843fbe07b05402";
+		};
+		302482151C278EE300B6FA6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -565,6 +587,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GetaRoom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -577,6 +603,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GetaRoom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
